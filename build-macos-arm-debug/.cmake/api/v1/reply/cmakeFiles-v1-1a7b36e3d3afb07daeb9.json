@@ -1,0 +1,546 @@
+{
+	"inputs" : 
+	[
+		{
+			"path" : "CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/CMakeFiles/3.24.1/CMakeSystem.cmake"
+		},
+		{
+			"path" : "vcpkg/scripts/buildsystems/vcpkg.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeDependentOption.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeSystemSpecificInitialize.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Darwin-Initialize.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/CMakeFiles/3.24.1/CMakeCCompiler.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/CMakeFiles/3.24.1/CMakeCXXCompiler.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeSystemSpecificInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeGenericSystem.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeInitializeConfigs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Darwin.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/UnixPaths.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeCInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/Clang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/GNU.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Apple-Clang-C.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Apple-Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeCXXInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeLanguageInformation.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/Clang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Compiler/Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Apple-Clang-CXX.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/Platform/Apple-Clang.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeCommonLanguageInclude.cmake"
+		},
+		{
+			"path" : "cmake/StandardProjectSettings.cmake"
+		},
+		{
+			"path" : "cmake/CompilerWarnings.cmake"
+		},
+		{
+			"path" : "vcpkg.json"
+		},
+		{
+			"path" : "src/CMakeLists.txt"
+		},
+		{
+			"path" : "docs/CMakeLists.txt"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindDoxygen.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"path" : "docs/Doxyfile.in"
+		},
+		{
+			"path" : "test/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2ConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Config.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Targets-release.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CTest.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CTestUseLaunchers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CTestTargets.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/DartConfiguration.tcl.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch.cmake"
+		},
+		{
+			"path" : "viewer/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2ConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FeatureSummary.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2ConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FeatureSummary.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/png/vcpkg-cmake-wrapper.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPNG.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/zlib/vcpkg-cmake-wrapper.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindZLIB.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-targets-release.cmake"
+		},
+		{
+			"path" : "benchmark/CMakeLists.txt"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2ConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Config.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch2Targets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2ConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FeatureSummary.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets-release.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CMakeFindDependencyMacro.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2ConfigVersion.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2Config.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FeatureSummary.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2staticTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2/SDL2mainTargets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/png/vcpkg-cmake-wrapper.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPNG.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/zlib/vcpkg-cmake-wrapper.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindZLIB.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/SelectLibraryConfigurations.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageHandleStandardArgs.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/FindPackageMessage.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-targets.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-targets-debug.cmake"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/sdl2-image/sdl2-image-targets-release.cmake"
+		},
+		{
+			"path" : "benchmark/benchmark.in.cpp"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CTest.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CTestUseLaunchers.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/CTestTargets.cmake"
+		},
+		{
+			"isCMake" : true,
+			"isExternal" : true,
+			"path" : "/opt/homebrew/Cellar/cmake/3.24.1/share/cmake/Modules/DartConfiguration.tcl.in"
+		},
+		{
+			"isGenerated" : true,
+			"path" : "build-macos-arm-debug/vcpkg_installed/arm64-osx/share/Catch2/Catch.cmake"
+		}
+	],
+	"kind" : "cmakeFiles",
+	"paths" : 
+	{
+		"build" : "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug",
+		"source" : "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1"
+	},
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}

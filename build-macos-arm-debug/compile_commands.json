@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug",
+  "command": "/opt/homebrew/opt/llvm@13/bin/clang -I\"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/src\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.3 -o src/CMakeFiles/qoi.dir/qoi/qoi.c.o -c \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/src/qoi/qoi.c\"",
+  "file": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/src/qoi/qoi.c"
+},
+{
+  "directory": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug",
+  "command": "/opt/homebrew/opt/llvm@13/bin/clang++ -I\"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/src\" -isystem \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/vcpkg_installed/arm64-osx/include\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.3 -std=gnu++17 -o test/CMakeFiles/qoi_tests.dir/qoi/sum.cpp.o -c \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/test/qoi/sum.cpp\"",
+  "file": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/test/qoi/sum.cpp"
+},
+{
+  "directory": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug",
+  "command": "/opt/homebrew/opt/llvm@13/bin/clang -I\"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/src\" -isystem \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/vcpkg_installed/arm64-osx/include\" -isystem \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/vcpkg_installed/arm64-osx/include/SDL2\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.3 -o viewer/CMakeFiles/qoi_viewer.dir/main.c.o -c \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/viewer/main.c\"",
+  "file": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/viewer/main.c"
+},
+{
+  "directory": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug",
+  "command": "/opt/homebrew/opt/llvm@13/bin/clang++ -I\"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/src\" -isystem \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/vcpkg_installed/arm64-osx/include\" -isystem \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/vcpkg_installed/arm64-osx/include/SDL2\" -g -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.3 -std=gnu++17 -o benchmark/CMakeFiles/qoi_benchmark.dir/benchmark.cpp.o -c \"/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/benchmark/benchmark.cpp\"",
+  "file": "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/benchmark/benchmark.cpp"
+}
+]

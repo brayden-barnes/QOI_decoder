@@ -1,0 +1,22 @@
+\hypertarget{qoi_8h_source}{}\doxysection{qoi.\+h}
+\label{qoi_8h_source}\index{qoi/qoi.h@{qoi/qoi.h}}
+\mbox{\hyperlink{qoi_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <stdint.h>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{8 }
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#define QOI\_COLORSPACE\_SRGB 0    }}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#define QOI\_COLORSPACE\_LINEAR 1  }}
+\DoxyCodeLine{15 }
+\DoxyCodeLine{17 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structqoi__desc__t}{qoi\_desc\_t}} \{}
+\DoxyCodeLine{18   uint32\_t \mbox{\hyperlink{structqoi__desc__t_a2e953f3cb093d3d366bfd5f1ba5b7cf0}{width}};      }
+\DoxyCodeLine{19   uint32\_t \mbox{\hyperlink{structqoi__desc__t_a9341f0155597477a4cccdd370eae882b}{height}};     }
+\DoxyCodeLine{20   uint8\_t \mbox{\hyperlink{structqoi__desc__t_a8d68c8afd2587ebdd2d408b2d11c2657}{channels}};    }
+\DoxyCodeLine{21   uint8\_t \mbox{\hyperlink{structqoi__desc__t_a23a1288de57656fffbdb533cb71269fd}{colorspace}};  }
+\DoxyCodeLine{22 \} \mbox{\hyperlink{qoi_8h_ada3b0070c24468fab0d8ef9f27dc022e}{qoi\_desc\_t}};}
+\DoxyCodeLine{23 }
+\DoxyCodeLine{29 \textcolor{keywordtype}{void} *\mbox{\hyperlink{qoi_8h_aa46e84d9a2117b6a0e08d0478a20b504}{qoi\_decode}}(\textcolor{keywordtype}{void} \textcolor{keyword}{const} *data, uint64\_t size, \mbox{\hyperlink{structqoi__desc__t}{qoi\_desc\_t}} *out\_desc);}
+
+\end{DoxyCode}

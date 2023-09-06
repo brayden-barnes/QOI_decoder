@@ -1,0 +1,58 @@
+\hypertarget{qoi_8h}{}\doxysection{qoi/qoi.h File Reference}
+\label{qoi_8h}\index{qoi/qoi.h@{qoi/qoi.h}}
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+Include dependency graph for qoi.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=133pt]{qoi_8h__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structqoi__desc__t}{qoi\+\_\+desc\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Image description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries QOI\+\_\+\+COLORSPACE\+\_\+\+SRGB}~0
+\begin{DoxyCompactList}\small\item\em s\+RGB with linear alpha \end{DoxyCompactList}\item 
+\#define {\bfseries QOI\+\_\+\+COLORSPACE\+\_\+\+LINEAR}~1
+\begin{DoxyCompactList}\small\item\em all channels linear \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{qoi_8h_ada3b0070c24468fab0d8ef9f27dc022e}\label{qoi_8h_ada3b0070c24468fab0d8ef9f27dc022e}} 
+typedef struct \mbox{\hyperlink{structqoi__desc__t}{qoi\+\_\+desc\+\_\+t}} {\bfseries qoi\+\_\+desc\+\_\+t}
+\begin{DoxyCompactList}\small\item\em Image description. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void $\ast$ \mbox{\hyperlink{qoi_8h_aa46e84d9a2117b6a0e08d0478a20b504}{qoi\+\_\+decode}} (void const $\ast$data, uint64\+\_\+t size, \mbox{\hyperlink{structqoi__desc__t}{qoi\+\_\+desc\+\_\+t}} $\ast$out\+\_\+desc)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Public interface of QOI codec library 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{qoi_8h_aa46e84d9a2117b6a0e08d0478a20b504}\label{qoi_8h_aa46e84d9a2117b6a0e08d0478a20b504}} 
+\index{qoi.h@{qoi.h}!qoi\_decode@{qoi\_decode}}
+\index{qoi\_decode@{qoi\_decode}!qoi.h@{qoi.h}}
+\doxysubsubsection{\texorpdfstring{qoi\_decode()}{qoi\_decode()}}
+{\footnotesize\ttfamily void $\ast$ qoi\+\_\+decode (\begin{DoxyParamCaption}\item[{void const $\ast$}]{data,  }\item[{uint64\+\_\+t}]{size,  }\item[{\mbox{\hyperlink{structqoi__desc__t}{qoi\+\_\+desc\+\_\+t}} $\ast$}]{out\+\_\+desc }\end{DoxyParamCaption})}
+
+Decodes the provided buffer into raw pixels \begin{DoxyReturn}{Returns}
+A pointer to the decoded image. The caller is responsible for freeing this memory. 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+ & {\em data} & A pointer to the buffer of pixels to decode \\
+\hline
+ & {\em size} & The size of the input buffer, in bytes \\
+\hline
+\mbox{\texttt{ out}}  & {\em out\+\_\+desc} & The description of the decoded image \\
+\hline
+\end{DoxyParams}

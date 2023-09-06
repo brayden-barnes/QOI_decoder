@@ -1,0 +1,15 @@
+# ninja log v5
+109	138	1664420131144392000	out/lib/libqoid.a	9def6cf8d5a168e3
+3	439	1663177025359893834	test/CMakeFiles/qoi_tests.dir/qoi/sum.cpp.o	f0a7193daffc2496
+136	1164	1664419525500364792	out/bin/qoi_tests	f7d0f0eeb2eeccc7
+136	1164	1664419525500364792	test/qoi_tests_tests-b12d07c.cmake	f7d0f0eeb2eeccc7
+136	1164	1664419525500364792	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/test/qoi_tests_tests-b12d07c.cmake	f7d0f0eeb2eeccc7
+2	1920	1662577172682182942	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/docs/doxygen/html/index.html	403c9ab0ea29bdae
+7	109	1664420131113942990	src/CMakeFiles/qoi.dir/qoi/qoi.c.o	60221a1e97f51fa
+7	937	1664300953334000589	benchmark/CMakeFiles/qoi_benchmark.dir/benchmark.cpp.o	26f979808b3f980f
+7	1321	1664300953719289963	viewer/CMakeFiles/qoi_viewer.dir/main.c.o	db07e5af5283106e
+2	1920	1662577172682182942	docs/doxygen/html/index.html	403c9ab0ea29bdae
+136	326	1664419524661078755	out/bin/qoi_viewer	457459a0293cf66b
+138	896	1664420131902013950	out/bin/qoi_benchmark	3963a2c902f7fb04
+138	896	1664420131902013950	benchmark/qoi_benchmark_tests-b12d07c.cmake	3963a2c902f7fb04
+138	896	1664420131902013950	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-debug/benchmark/qoi_benchmark_tests-b12d07c.cmake	3963a2c902f7fb04

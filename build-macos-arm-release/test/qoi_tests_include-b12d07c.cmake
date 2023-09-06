@@ -1,0 +1,5 @@
+if(EXISTS "/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-release/test/qoi_tests_tests-b12d07c.cmake")
+  include("/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-release/test/qoi_tests_tests-b12d07c.cmake")
+else()
+  add_test(qoi_tests_NOT_BUILT-b12d07c qoi_tests_NOT_BUILT-b12d07c)
+endif()

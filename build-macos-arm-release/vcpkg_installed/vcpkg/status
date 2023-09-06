@@ -1,0 +1,86 @@
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 34b49600baba2789dc94ed7a72ec3373112484e4dfb6e4f435e14cfb80326685
+Type: Port
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2022-07-18
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 7225884b2b81654c0437fc210817df07c5eda1b2ed4fcf455e39e4b3320d1a3d
+Type: Port
+Status: install ok installed
+
+Package: catch2
+Version: 3.1.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 0214f149716bcc8444dc05939458e89f5a604fbf651baf1482d5c94fb9e86317
+Description: A modern, header-only test framework for unit testing.
+Type: Port
+Status: install ok installed
+
+Package: sdl2
+Version: 2.24.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 6ad84fc01c269b838ae70b09ca9b2afcc41c5210602ad05c8e7c984aa1e285aa
+Description: Simple DirectMedia Layer is a cross-platform development library designed to provide low level access to audio, keyboard, mouse, joystick, and graphics hardware via OpenGL and Direct3D.
+Type: Port
+Status: install ok installed
+
+Package: sdl2
+Feature: vulkan
+Architecture: arm64-osx
+Multi-Arch: same
+Description: Vulkan functionality for SDL
+Type: Port
+Status: install ok installed
+
+Package: sdl2
+Feature: x11
+Architecture: arm64-osx
+Multi-Arch: same
+Description: Dynamically load X11 support
+Type: Port
+Status: install ok installed
+
+Package: zlib
+Version: 1.2.12
+Port-Version: 1
+Depends: vcpkg-cmake
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 7bcef78ec61ceb6e66e225ab9bd9788824859b6698e422327ab7dc45ae6ddb32
+Description: A compression library
+Type: Port
+Status: install ok installed
+
+Package: libpng
+Version: 1.6.37
+Port-Version: 19
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: a93a3c3cedc8c125ad8ac80aed28e1ae536dc06696f850def40dd57d36b4bdaf
+Description: libpng is a library implementing an interface for reading and writing PNG (Portable Network Graphics) format files
+Type: Port
+Status: install ok installed
+
+Package: sdl2-image
+Version: 2.0.5
+Port-Version: 7
+Depends: libpng, sdl2, vcpkg-cmake, vcpkg-cmake-config
+Architecture: arm64-osx
+Multi-Arch: same
+Abi: 1ba22439c66af3d99962f0bd7916dbe757807fdb4d80c85c665bbc0957d6bcd1
+Description: SDL_image is an image file loading library. It loads images as SDL surfaces and textures, and supports the following formats: BMP, GIF, JPEG, LBM, PCX, PNG, PNM, TGA, TIFF, WEBP, XCF, XPM, XV
+Type: Port
+Status: install ok installed
+

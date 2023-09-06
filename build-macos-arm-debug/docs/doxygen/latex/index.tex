@@ -1,0 +1,191 @@
+\label{index_md__Users_brayden_Documents_School_Fifth_Year_Computer_Security_Assignment1_README}%
+\Hypertarget{index_md__Users_brayden_Documents_School_Fifth_Year_Computer_Security_Assignment1_README}%
+ This project is intended to be used as a starting point for writing a decoder for the QOI image format.
+
+\begin{quote}
+⚠️ While you should be able to build this project on all major platforms (Windows, Mac\+OS, and common Linux distributions), it is recommended to do so in a UNIX-\/y environment. In a subsequent lab, we\textquotesingle{}re going to be building on the project, adding some tools that work best in Linux or Mac\+OS.
+
+If you are using a Windows device, I\textquotesingle{}ve found WSL2 works pretty well. I have tested this project on an Ubuntu WSL2 instance from Windows 11. Even the GUI image viewer works! \end{quote}
+\hypertarget{index_autotoc_md1}{}\doxysection{Getting Started}\label{index_autotoc_md1}
+\hypertarget{index_autotoc_md2}{}\doxysubsection{Pre-\/\+Setup}\label{index_autotoc_md2}
+The first step is to get the template onto your local machine. You can start by making an empty local repository\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ mkdir -\/p /path/to/your/local/repo}
+\DoxyCodeLine{\$ cd /path/to/your/local/repo}
+\DoxyCodeLine{\$ git init}
+
+\end{DoxyCode}
+
+
+Now you can configure a remote connection to the template repository and pull its history into yours. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git remote add upstream https://github.com/eced4406/qoi-\/starter-\/project.git}
+\DoxyCodeLine{\$ git pull upstream main}
+
+\end{DoxyCode}
+
+
+Your local repository should now be populated with the contents of the template, and you should see commits from yours truly when you run {\ttfamily git log}.
+
+Now, fetch the git submodules (vcpkg)\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git submodule update -\/-\/init}
+
+\end{DoxyCode}
+
+
+At this point, you can push your repo up to a hosting service (like Git\+Hub or Git\+Lab) or just keep it local. For more info, see \href{https://docs.github.com/en/get-started/importing-your-projects-to-github/importing-source-code-to-github/adding-locally-hosted-code-to-github\#adding-a-local-repository-to-github-using-git}{\texttt{ here}}.\hypertarget{index_autotoc_md3}{}\doxysubsubsection{Branches}\label{index_autotoc_md3}
+This will make it easier to submit your assignment and pull in any upstream changes (see below).
+
+You can create and checkout a branch named \char`\"{}assignment\char`\"{} like this\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git checkout -\/b assignment}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md4}{}\doxysubsubsection{Getting Updates}\label{index_autotoc_md4}
+Your instructor may need to fix some things in the template. If so, there will be new commits on the upstream repo that you\textquotesingle{}ll need to merge into yours. If there are changes, you\textquotesingle{}ll get a notification on Brightspace with instructions. They\textquotesingle{}ll look something like this\+:
+
+First, pull the changes from the upstream. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git checkout main}
+\DoxyCodeLine{\$ git pull upstream main}
+\DoxyCodeLine{\$ git log \# print the log to review the changes}
+
+\end{DoxyCode}
+
+
+Then, merge the changes into your working branch. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ git checkout assignment \# or whatever you called your working branch for the first assignment}
+\DoxyCodeLine{\$ git merge main}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md5}{}\doxysubsection{Setup}\label{index_autotoc_md5}
+Now that you have the source code on your local machine, we can start to setup the project. There are a few tools that you\textquotesingle{}ll need. Check the platform-\/specific instructions for tips on installing them.
+
+What you\textquotesingle{}ll need\+:
+\begin{DoxyItemize}
+\item CMake v3.\+23+
+\item Clang v14+
+\item Visual Studio Code
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsubsection{Linux (\+Ubuntu or Debian)}\label{index_autotoc_md6}
+\begin{quote}
+ℹ️ Debian-\/based distributions, such as Ubuntu, are the most common, so I\textquotesingle{}ve provided instructions for them. You\textquotesingle{}re welcome to use something else, but you may be on your own when it comes to troubleshooting. If you get this working on another distribution, feel free to share any tips with the class via our discussion board. \end{quote}
+Get started by installing these packages\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ sudo apt-\/get update}
+\DoxyCodeLine{\$ sudo apt-\/get install \(\backslash\)}
+\DoxyCodeLine{    build-\/essential \(\backslash\)}
+\DoxyCodeLine{    curl \(\backslash\)}
+\DoxyCodeLine{    ninja-\/build \(\backslash\)}
+\DoxyCodeLine{    pkg-\/config \(\backslash\)}
+\DoxyCodeLine{    tar \(\backslash\)}
+\DoxyCodeLine{    unzip \(\backslash\)}
+\DoxyCodeLine{    zip}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md7}{}\doxyparagraph{1. Install CMake}\label{index_autotoc_md7}
+If you are using Ubuntu or Debian, you will likely not have the latest CMake available through apt\textquotesingle{}s default repositories. Rather than installing it with apt, you can use install script provided on CMake\textquotesingle{}s download page \href{https://cmake.org/download/}{\texttt{ here}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cd /tmp}
+\DoxyCodeLine{\$ wget https://github.com/Kitware/CMake/releases/download/v3.23.2/cmake-\/3.23.2-\/linux-\/x86\_64.sh}
+\DoxyCodeLine{\$ chmod +x cmake-\/3.23.2-\/linux-\/x86\_64.sh}
+\DoxyCodeLine{\$ ./cmake-\/3.23.2-\/linux-\/x86\_64.sh -\/-\/prefix=\$HOME/.local -\/-\/exclude-\/subdir -\/-\/skip-\/license}
+
+\end{DoxyCode}
+
+
+Make sure {\ttfamily \$\+HOME/.local/bin} is prepended to your {\ttfamily \$\+PATH}. It\textquotesingle{}s common to manage your path in your shell\textquotesingle{}s dotfile in your {\ttfamily \$\+HOME} directory (e.\+g. {\ttfamily \$\+HOME/.bashrc} for bash or {\ttfamily \$\+HOME/.zshrc} for zsh). Once CMake is installed and made available on your {\ttfamily PATH}, verify the version\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cmake -\/-\/version}
+\DoxyCodeLine{cmake version 3.23.2}
+\DoxyCodeLine{...}
+
+\end{DoxyCode}
+
+
+Alternatively, you can use Python\textquotesingle{}s {\ttfamily pip} (or even better {\ttfamily pipx}) to install CMake. This is my preferred method, but your mileage may vary. Here are some links that may prove helpful if you decide to try this approach\+:
+\begin{DoxyItemize}
+\item \href{https://github.com/pypa/pipx/\#install-pipx}{\texttt{ pipx installation}}
+\item \href{https://pypi.org/project/cmake/}{\texttt{ cmake pypi package}}
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxyparagraph{2. Install Clang (and LLVM tools)}\label{index_autotoc_md8}
+Next, we\textquotesingle{}ll install the latest stable version of Clang. The LLVM project provides \href{https://apt.llvm.org/}{\texttt{ up-\/to-\/date packages for Debian and Ubuntu}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cd /tmp}
+\DoxyCodeLine{\$ wget https://apt.llvm.org/llvm.sh}
+\DoxyCodeLine{\$ chmod +x llvm.sh}
+\DoxyCodeLine{\$ sudo ./llvm.sh 13 all}
+
+\end{DoxyCode}
+
+
+Verify that clang-\/13 was installed\+:
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ clang-\/14 -\/-\/version}
+\DoxyCodeLine{Ubuntu clang version 13.0.x}
+\DoxyCodeLine{Target: x86\_64-\/pc-\/linux-\/gnu}
+\DoxyCodeLine{Thread model: posix}
+\DoxyCodeLine{InstalledDir: /usr/bin}
+
+\end{DoxyCode}
+\hypertarget{index_autotoc_md9}{}\doxyparagraph{3. Setup VS Code}\label{index_autotoc_md9}
+Install the C/\+C++ Extension pack for VS Code (it should be recommended to you when you open the project for the first time). You may need to restart/reload VS Code for this to take effect.
+
+Run {\ttfamily \texorpdfstring{$>$}{>} CMake\+: Scan for Kits} so that VS Code finds the version of Clang that you installed in step 2.
+
+Run {\ttfamily \texorpdfstring{$>$}{>} CMake\+: Select Kit} and select the version of Clang that you installed in step 2. \hypertarget{index_autotoc_md10}{}\doxysubsubsection{Mac\+OS}\label{index_autotoc_md10}
+Use \href{https://brew.sh/}{\texttt{ Homebrew}} to install the dependencies.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ brew install cmake ninja llvm@13}
+
+\end{DoxyCode}
+
+
+Open the project with Visual Studio Code.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\$ cd /path/to/qoi}
+\DoxyCodeLine{\$ code .}
+
+\end{DoxyCode}
+
+
+Select the Homebrew Clang kit (provided in {\ttfamily .vscode/cmake-\/kits.\+json}).\hypertarget{index_autotoc_md11}{}\doxysubsubsection{Windows}\label{index_autotoc_md11}
+Before setting up this project on Windows, please see my note at the top of this README. If you decide to use WSL2 rather than using Windows natively, you can follow the Linux instructions from within your WSL2 environment.
+
+With that disclaimer out of the way, here\textquotesingle{}s how you can get started on Windows natively.\hypertarget{index_autotoc_md12}{}\doxyparagraph{1. Install Visual Studio 2022}\label{index_autotoc_md12}
+You have two options here. You can either install the full Visual Studio 2022 (Community edition) if you want the Visual Studio IDE. Alternatively, you can just install the build tools. For this course, all you need are the build tools, but you may want the full Visual Studio IDE for other courses or projects.
+\begin{DoxyItemize}
+\item \href{https://visualstudio.microsoft.com/downloads/\#visual-studio-community-2022}{\texttt{ Visual Studio 2022 -\/ Community}}
+\item \href{https://visualstudio.microsoft.com/downloads/\#build-tools-for-visual-studio-2022}{\texttt{ Visual Studio 2022 -\/ Build Tools}}
+\end{DoxyItemize}
+
+Make sure to select \char`\"{}\+Desktop Development with C++\char`\"{} when choosing what to install.\hypertarget{index_autotoc_md13}{}\doxyparagraph{2. Install CMake}\label{index_autotoc_md13}
+Download and install the \char`\"{}\+Windows x64 Installer\char`\"{} from the Latest Release section \href{https://cmake.org/download/}{\texttt{ here}}.\hypertarget{index_autotoc_md14}{}\doxyparagraph{3. Configure VS Code}\label{index_autotoc_md14}
+Open the project folder in VS Code and install the recommended extensions. You might need to restart VS Code after installing the extensions.
+
+Open the Command Palette with {\ttfamily Ctrl + Shift + P} and run \char`\"{}\+CMake\+: Scan for kits\char`\"{}.
+
+From the Command Palette, run \char`\"{}\+CMake\+: Select kit\char`\"{}. Select \char`\"{}\+Visual Studio 2022 -\/ x64\char`\"{}.\hypertarget{index_autotoc_md15}{}\doxysubsection{Building}\label{index_autotoc_md15}
+From the Command Palette, run \char`\"{}\+CMake\+: Build\char`\"{}\hypertarget{index_autotoc_md16}{}\doxysection{References}\label{index_autotoc_md16}
+
+\begin{DoxyItemize}
+\item QOI \href{https://qoiformat.org/qoi-specification.pdf}{\texttt{ specification}}
+\item QOI \href{https://github.com/phoboslab/qoi}{\texttt{ reference implementation}}
+\item Sy Brand\textquotesingle{}s documentation \href{https://devblogs.microsoft.com/cppblog/clear-functional-c-documentation-with-sphinx-breathe-doxygen-cmake/}{\texttt{ tutorial}}
+\item Victoria Rudakova\textquotesingle{}s documentation \href{https://vicrucann.github.io/tutorials/quick-cmake-doxygen/}{\texttt{ tutorial}}
+\item C++ Weekly -\/ \href{https://www.youtube.com/watch?v=gO0KBoqkOoU}{\texttt{ Fuzz Testing}} 
+\end{DoxyItemize}

@@ -1,0 +1,192 @@
+diff --git a/src/qoi/qoi.c b/src/qoi/qoi.c
+index 488f0b7..e7062b2 100644
+--- a/src/qoi/qoi.c
++++ b/src/qoi/qoi.c
+@@ -6,31 +6,143 @@
+ #include <stdlib.h>
+ #include <string.h>
+ 
+-#define MAGIC 800
+-
+-void *qoi_decode(void const *data, uint64_t (size), qoi_desc_t *(out_desc)) {
+-  
+-  char *bytes = (char *)data; //convert binary data into chars we can read
+-  unsigned char c;
+-  char magic[MAGIC];
+-  qoi_desc_t *header;
+-  
++#define HEADER_LENGTH 14 //length (in bytes) of .qoi header
++#define BYTE_STREAM_END 8 //length (in bytes) of end-of-byte-stream indicator
++
++//these definitions correspond to opcode specific byte tags specified in the qoi spec
++#define RGB_OPCODE_MASK 0b11111110
++#define RGBA_OPCODE_MASK 0b11111111
++#define RUN_OPCODE_MASK 0b11000000
++#define LUMA_OPCODE_MASK 0b10000000
++#define DIFF_OPCODE_MASK 0b01000000
++#define INDEX_OPCODE_MASK 0b00000000
++
++#define SIX_LSBITS 0b00111111 //last 6 bits of a byte
++#define TWO_MSBITS 0b11000000 //first 2 bits of a byte
++
++static void header_reader(qoi_desc_t *out_desc, unsigned char *bytes);
++
++void *qoi_decode(void const *data, uint64_t size, qoi_desc_t *out_desc) {
++
++  //initialize pixel rgba values to defaults
++  qoi_op_rgba *pixel = malloc(sizeof(qoi_op_rgba));
++  pixel->r = 0;
++  pixel->g = 0;
++  pixel->b = 0;
++  pixel->a = 255;
++
++  qoi_op_rgba *prev_pixel = malloc(sizeof(qoi_op_rgba));
++  prev_pixel->r = 0;
++  prev_pixel->g = 0;
++  prev_pixel->b = 0;
++  prev_pixel->a = 255;
++
++  //read header & create vars for decoding chunks
++  unsigned char *bytes = (unsigned char *)data; //the bytes var acts as a pointer to different bytes of data
++  int i = HEADER_LENGTH;                        //used to index data bytes starting after end of qoi header 
++  int temp_bytes, temp;                         //vars for debugging to ensure correct data byte is indexed
++  uint8_t run_length = 0;                       //length of run for run opcode 
++  uint8_t run_decrement; 
++  qoi_op_rgba index[64] = {0};                  //zero-initialized array
++  int index_position, desired_index;
++  uint8_t dr, dg, db;
++
+   //read header
+-  fgets(magic, MAGIC, bytes);
+-  puts(magic);
+-  
+-  /*
+-  for(int i = 0; i < size; i++){
+-    c = bytes[i];
+-    printf("%c",c);
++  header_reader(out_desc, bytes);
++  int num_pixels = out_desc->height * out_desc->width;
++  uint8_t *pixels = malloc(num_pixels * out_desc->channels); //array to store pixel RGBA values
++
++  //decode chunks
++  for(int pxl = 0; pxl < num_pixels * out_desc->channels; pxl+=out_desc->channels) { 
++    temp_bytes = (uint8_t)bytes[i];
++    temp = (uint8_t)bytes[i+1];
++
++    if ((uint8_t)bytes[i] == RGB_OPCODE_MASK) { //RGB opcode detected
++      pixel->r = (uint8_t)bytes[i+1];
++      pixel->g = (uint8_t)bytes[i+2];
++      pixel->b = (uint8_t)bytes[i+3];
++      i += 4; //we have read 4 bytes
++    } 
++
++    else if ((uint8_t)bytes[i] == RGBA_OPCODE_MASK) { //RGBA opcode detected
++      pixel->r = (uint8_t)bytes[i+1];
++      pixel->g = (uint8_t)bytes[i+2];
++      pixel->b = (uint8_t)bytes[i+3];       
++      pixel->a = (uint8_t)bytes[i+4];
++      i += 5; //we have read 5 bytes
++    } 
++
++    else if (((uint8_t)bytes[i] & TWO_MSBITS) == RUN_OPCODE_MASK) { //run opcode detected
++      run_length = ((uint8_t)bytes[i] & SIX_LSBITS);
++
++      for(run_decrement = run_length; run_decrement > 0; run_decrement--) {
++        pixels[pxl] = pixel->r;
++        pixels[pxl+1] = pixel->g;
++        pixels[pxl+2] = pixel->b;
++        pixels[pxl+3] = pixel->a;
++        pxl += out_desc->channels;
++      }
++      i++; //we have read 1 byte
++    }
++
++    else if (((uint8_t)bytes[i] & TWO_MSBITS) == DIFF_OPCODE_MASK) { //diff opcode detected
++      //extract channel differences
++      dr = ((uint8_t)bytes[i] & 0b00110000) - 2;
++      dg = ((uint8_t)bytes[i] & 0b00001100) - 2;
++      db = ((uint8_t)bytes[i] & 0b00000011) - 2;
++
++      //compute new channel values
++      pixel->r += dr;
++      pixel->g += dg;
++      pixel->b += db;
++      i++; //we have read 1 byte
++    }
++
++    else if (((uint8_t)bytes[i] & TWO_MSBITS) == LUMA_OPCODE_MASK) { //luma opcode detected
++      dg = ((uint8_t)bytes[i] & SIX_LSBITS) - 32;
++      dr = (((uint8_t)bytes[i+1] >> 4) & 0b00001111) - 8 + dg;
++      db = ((uint8_t)bytes[i+1] & 0b00001111) - 8 + dg;
++
++      pixel->r += dr;
++      pixel->g += dg;
++      pixel->b += db;
++      i += 2; //we have read 2 bytes
++    } 
++
++    else if (((uint8_t)bytes[i] & TWO_MSBITS) == 0b00000000) { //index opcode detected
++      desired_index = ((uint8_t)bytes[i] & SIX_LSBITS);
++      pixel->r = index[desired_index].r;
++      pixel->g = index[desired_index].g;
++      pixel->b = index[desired_index].b;
++      pixel->a = index[desired_index].a;
++      i++; //we have read 1 byte
++    } 
++
++    pixels[pxl] = pixel->r;
++    pixels[pxl+1] = pixel->g;
++    pixels[pxl+2] = pixel->b;
++    pixels[pxl+3] = pixel->a;
++    index_position = (((pixel->r * 3) + (pixel->g * 5) + (pixel->b * 7) + (pixel->a * 11)) % 64);
++    index[index_position] = *pixel;
++    run_length = 0;
+   }
+-  */
+ 
+-  return NULL; //return NULL
++  return pixels;
+ }
+ 
++static void header_reader(qoi_desc_t *out_desc, unsigned char *bytes) {
+ 
++  /* 
++  in a qoi header there are 14 (BE) bytes:
++  - bytes 1-4: "qoif" characters (omitted from header_reader() as they aren't needed)
++  - bytes 5-8: image width
++  - bytes 9-12: image height
++  - byte 13: image channels
++  - byte 14: image colorspace
++  */
+ 
+-//pass a struct into header_check and if qoif 
+-//is read, set the rest of the values appropriately 
+-//and return the struct parameter
+\ No newline at end of file
++  out_desc->width = (uint8_t)bytes[4] << 24 | (uint8_t)bytes[5] << 16 | (uint8_t)bytes[6] << 8 | (uint8_t)bytes[7];
++  out_desc->height = (uint8_t)bytes[8] << 24 | (uint8_t)bytes[9] << 16 | (uint8_t)bytes[10] << 8 | (uint8_t)bytes[11];
++  out_desc->channels = (uint8_t)bytes[12];
++  out_desc->colorspace = (uint8_t)bytes[13];
++}
+\ No newline at end of file
+diff --git a/src/qoi/qoi.h b/src/qoi/qoi.h
+index 591105d..299035e 100644
+--- a/src/qoi/qoi.h
++++ b/src/qoi/qoi.h
+@@ -21,6 +21,16 @@ typedef struct qoi_desc_t {
+   uint8_t colorspace;  ///< image colorspace: see @ref colorspace
+ } qoi_desc_t;
+ 
++
++/// Pixel with QOI_OP_RGB or QOI_OP_RGBA opcode
++typedef struct qoi_op_rgba {
++  uint8_t r;
++  uint8_t g;
++  uint8_t b;
++  uint8_t a;
++} qoi_op_rgba;
++
++
+ /// Decodes the provided buffer into raw pixels
+ /// \returns A pointer to the decoded image. The caller is responsible for freeing this memory.
+ /// \param data A pointer to the buffer of pixels to decode

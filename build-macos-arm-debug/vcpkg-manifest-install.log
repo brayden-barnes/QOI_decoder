@@ -1,0 +1,22 @@
+Detecting compiler hash for triplet arm64-osx...
+All requested packages are currently installed.
+Restored 0 package(s) from /Users/brayden/.cache/vcpkg/archives in 875 ns. Use --debug to see more details.
+Total elapsed time: 725 ms
+catch2 provides CMake targets:
+
+    # this is heuristically generated, and may not be correct
+    find_package(Catch2 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE Catch2::Catch2 Catch2::Catch2WithMain)
+
+sdl2 provides CMake targets:
+
+    # this is heuristically generated, and may not be correct
+    find_package(SDL2 CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2 SDL2::SDL2main SDL2::SDL2-static)
+
+sdl2-image provides CMake targets:
+
+    # this is heuristically generated, and may not be correct
+    find_package(sdl2-image CONFIG REQUIRED)
+    target_link_libraries(main PRIVATE SDL2::SDL2_image)
+

@@ -1,0 +1,26 @@
+# ninja log v5
+1	1081	1663602539490025272	docs/doxygen/html/index.html	3d83d5842f8abc26
+152	506	1664059518740999836	out/bin/qoi_benchmark	8e28e75e5aff17fe
+2	527	1663602539916152519	test/CMakeFiles/qoi_tests.dir/qoi/sum.cpp.o	64c85faa6e4fd1a5
+152	506	1664059518740999836	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-release/benchmark/qoi_benchmark_tests-b12d07c.cmake	8e28e75e5aff17fe
+152	423	1664059518657081252	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-release/test/qoi_tests_tests-b12d07c.cmake	9d86980ba70ffa3d
+152	423	1664059518657081252	out/bin/qoi_tests	9d86980ba70ffa3d
+152	423	1664059518657081252	test/qoi_tests_tests-b12d07c.cmake	9d86980ba70ffa3d
+152	311	1664059518544252183	out/bin/qoi_viewer	94307c39a4b73b2d
+1	1081	1663602539490025272	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-release/docs/doxygen/html/index.html	3d83d5842f8abc26
+152	506	1664059518740999836	benchmark/qoi_benchmark_tests-b12d07c.cmake	8e28e75e5aff17fe
+115	152	1664059518386619000	out/lib/libqoi.a	db4188dddc7b5767
+10	1297	1664055905745558348	viewer/CMakeFiles/qoi_viewer.dir/main.c.o	f8a6a5b9f5bcb5f0
+10	1034	1664055905481601987	benchmark/CMakeFiles/qoi_benchmark.dir/benchmark.cpp.o	f49f251c06afc3c0
+6	115	1664059518348807490	src/CMakeFiles/qoi.dir/qoi/qoi.c.o	e33baa836c71f0a3
+5	55	1664108237105131835	src/CMakeFiles/qoi.dir/qoi/qoi.c.o	e33baa836c71f0a3
+55	79	1664108237130797000	out/lib/libqoi.a	db4188dddc7b5767
+79	257	1664108237308591780	out/bin/qoi_tests	9d86980ba70ffa3d
+79	257	1664108237308591780	test/qoi_tests_tests-b12d07c.cmake	9d86980ba70ffa3d
+79	257	1664108237308591780	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-release/test/qoi_tests_tests-b12d07c.cmake	9d86980ba70ffa3d
+6	1021	1664108238068611857	benchmark/CMakeFiles/qoi_benchmark.dir/benchmark.cpp.o	f49f251c06afc3c0
+6	1281	1664108238329692772	viewer/CMakeFiles/qoi_viewer.dir/main.c.o	f8a6a5b9f5bcb5f0
+1022	1332	1664108238384120590	out/bin/qoi_benchmark	8e28e75e5aff17fe
+1022	1332	1664108238384120590	benchmark/qoi_benchmark_tests-b12d07c.cmake	8e28e75e5aff17fe
+1022	1332	1664108238384120590	/Users/brayden/Documents/School/Fifth Year/Computer Security/Assignment1/build-macos-arm-release/benchmark/qoi_benchmark_tests-b12d07c.cmake	8e28e75e5aff17fe
+1281	1407	1664108238457329114	out/bin/qoi_viewer	94307c39a4b73b2d
